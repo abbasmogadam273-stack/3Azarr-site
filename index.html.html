@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تولد ۲۹ سالگی شیرین 🍂✨</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lalezar&family=Vazirmatn:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #FDF6EC;
+      --bg-card: #FFFDF9;
+      --orange: #D96B27;
+      --orange-dark: #B55216;
+      --gold: #E5A93C;
+      --text: #3D2B1F;
+      --text-soft: #6E503B;
+      --border: #EDD9BE;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Vazirmatn', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow-x: hidden;
+      position: relative;
+      padding: 20px;
+    }
+
+    .leaves-bg {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .leaf {
+      position: absolute;
+      top: -40px;
+      font-size: 20px;
+      opacity: 0.35;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-40px) rotate(0deg);
+        opacity: 0;
+      }
+      15% {
+        opacity: 0.4;
+      }
+      85% {
+        opacity: 0.4;
+      }
+      100% {
+        transform: translateY(105vh) rotate(280deg);
+        opacity: 0;
+      }
+    }
+
+    .app-shell {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 620px;
+      min-height: 480px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 18px;
+      gap: 12px;
+    }
+
+    .step-indicator {
+      font-family: 'Lalezar', 'Vazirmatn', sans-serif;
+      font-size: 15px;
+      color: var(--orange-dark);
+      background: rgba(217, 107, 39, 0.12);
+      padding: 6px 14px;
+      border-radius: 999px;
+    }
+
+    .dots {
+      display: flex;
+      gap: 6px;
+    }
+
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #DFC7A7;
+      transition: all 0.25s ease;
+    }
+
+    .dot.active {
+      width: 22px;
+      border-radius: 999px;
+      background: var(--orange);
+    }
+
+    .page {
+      display: none;
+      background: var(--bg-card);
+      border: 2px solid var(--border);
+      border-radius: 28px;
+      padding: 36px 26px;
+      box-shadow: 0 14px 36px rgba(61, 43, 31, 0.08);
+      text-align: center;
+      animation: fadeUp 0.35s ease;
+    }
+
+    .page.active {
+      display: block;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1 {
+      font-family: 'Lalezar', 'Vazirmatn', sans-serif;
+      font-weight: 400;
+      letter-spacing: 0;
+      line-height: 1.3;
+      font-size: clamp(28px, 5vw, 38px);
+      color: var(--text);
+      margin-bottom: 14px;
+    }
+
+    p.lead {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-soft);
+      line-height: 1.9;
+      max-width: 470px;
+      margin: 0 auto 26px;
+    }
+
+    .btn-primary {
+      font-family: 'Lalezar', 'Vazirmatn', sans-serif;
+      font-size: 19px;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: #fff;
+      border: none;
+      border-radius: 18px;
+      padding: 13px 28px;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(217, 107, 39, 0.28);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 11px 24px rgba(217, 107, 39, 0.35);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+
+    .btn-secondary {
+      font-family: 'Lalezar', 'Vazirmatn', sans-serif;
+      font-size: 16px;
+      background: #F6EAD9;
+      color: var(--text);
+      border: 1.5px solid var(--border);
+      border-radius: 15px;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      margin-top: 14px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      text-decoration: none;
+    }
+
+    .btn-secondary:hover {
+      background: #EEDCC3;
+    }
+
+    /* صفحه ۴: ۶ کارت مینیمال */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+
+    @media (min-width: 520px) {
+      .cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .mini-card {
+      background: var(--bg);
+      border: 1.5px solid var(--border);
+      border-radius: 18px;
+      padding: 16px 12px;
+      cursor: pointer;
+      transition: all 0.22s ease;
+      min-height: 112px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .mini-card:hover {
+      border-color: var(--orange);
+      transform: translateY(-2px);
+    }
+
+    .mini-card .card-title {
+      font-family: 'Lalezar', 'Vazirmatn', sans-serif;
+      font-size: 17px;
+      color: var(--orange-dark);
+    }
+
+    .mini-card .card-note {
+      display: none;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .mini-card.open {
+      background: #FFF3E0;
+      border-color: var(--gold);
+    }
+
+    .mini-card.open .card-title {
+      font-size: 14px;
+    }
+
+    .mini-card.open .card-note {
+      display: block;
+    }
+
+    /* صفحه ۵: کیک و آرزو */
+    .cake-box {
+      margin: 8px auto 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .cake-visual {
+      position: relative;
+      width: 170px;
+      height: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .candles {
+      display: flex;
+      gap: 18px;
+      margin-bottom: 4px;
+      z-index: 2;
+    }
+
+    .candle {
+      width: 10px;
+      height: 28px;
+      background: linear-gradient(180deg, var(--gold), var(--orange));
+      border-radius: 5px;
+      position: relative;
+    }
+
+    .flame {
+      width: 12px;
+      height: 18px;
+      background: radial-gradient(circle, #FFF59D 20%, #FF9800 70%, transparent 100%);
+      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+      position: absolute;
+      top: -18px;
+      left: -1px;
+      animation: flicker 0.45s infinite alternate;
+      transition: opacity 0.35s ease, transform 0.35s ease;
+    }
+
+    .blown .flame {
+      opacity: 0;
+      transform: scale(0.2) translateY(-8px);
+      animation: none;
+    }
+
+    .smoke {
+      position: absolute;
+      top: -22px;
+      left: 1px;
+      font-size: 14px;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .blown .smoke {
+      animation: puffUp 1.1s ease-out forwards;
+    }
+
+    @keyframes puffUp {
+      0% { opacity: 0.85; transform: translateY(0) scale(0.8); }
+      100% { opacity: 0; transform: translateY(-28px) scale(1.4); }
+    }
+
+    @keyframes flicker {
+      0% { transform: scale(1) rotate(-3deg); }
+      100% { transform: scale(1.1) rotate(3deg); }
+    }
+
+    .cake-tier {
+      width: 150px;
+      height: 62px;
+      background: linear-gradient(180deg, #E8833A, var(--orange-dark));
+      border-radius: 18px 18px 14px 14px;
+      border: 3px solid #7A3812;
+      position: relative;
+    }
+
+    .cake-icing {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 22px;
+      background: #FFF4E4;
+      border-radius: 15px 15px 10px 10px;
+    }
+
+    .age-badge {
+      display: none;
+      font-family: 'Lalezar', 'Vazirmatn', sans-serif;
+      font-size: 32px;
+      color: var(--orange-dark);
+      background: #FFF1D6;
+      border: 2px solid var(--gold);
+      border-radius: 999px;
+      padding: 2px 22px;
+      animation: popIn 0.4s ease;
+    }
+
+    .age-badge.show {
+      display: inline-block;
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0.5); opacity: 0; }
+      80% { transform: scale(1.08); opacity: 1; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .wish-area {
+      width: 100%;
+      max-width: 440px;
+      margin: 14px auto 0;
+      padding-top: 16px;
+      border-top: 1.5px dashed var(--border);
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 82px;
+      border-radius: 16px;
+      border: 1.5px solid var(--border);
+      background: var(--bg);
+      padding: 12px 14px;
+      font-family: 'Vazirmatn', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      resize: vertical;
+      margin-bottom: 12px;
+      outline: none;
+    }
+
+    textarea:focus {
+      border-color: var(--orange);
+    }
+
+    .status-msg {
+      margin-top: 10px;
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--orange-dark);
+      min-height: 22px;
+    }
+
+    /* صفحه ۶: خلوت و مینیمال فقط برای ویدیوی تلگرام */
+    .video-only-page {
+      padding: 48px 24px;
+    }
+
+    .video-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      margin-top: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="leaves-bg" id="leavesBg"></div>
+
+  <main class="app-shell">
+    <div class="top-bar">
+      <span class="step-indicator" id="stepLabel">مرحله ۱ از ۶</span>
+      <div class="dots" id="dotsBar"></div>
+    </div>
+
+    <!-- صفحه ۱ -->
+    <section class="page active" id="page-1">
+      <h1>سلام شیرینِ آذرماه! 🍂✨</h1>
+      <p class="lead">
+        یه پشه 🦟 خبر داد که امروز ۲۹ ساله شدی! آماده‌ای بریم سراغ سورپرایزت؟
+      </p>
+      <button class="btn-primary" onclick="goToPage(2)">بزن بریم پشه! 🦟🍂</button>
+    </section>
+
+    <!-- صفحه ۲ -->
+    <section class="page" id="page-2">
+      <h1>یه سیاره کوچیک برای تو 🪐✨</h1>
+      <p class="lead">
+        شازده کوچولو می‌گفت چیزهای مهم رو فقط با قلب می‌شه دید؛ و تو یکی از قشنگ‌ترین آدم‌های دنیای منی، خواهر بزرگ‌ترِ دوست‌داشتنی!
+      </p>
+      <button class="btn-primary" onclick="goToPage(3)">بریم بعدی 🍂</button>
+    </section>
+
+    <!-- صفحه ۳ -->
+    <section class="page" id="page-3">
+      <h1>یه یادگاری کوچیک از پشه 🦟🧡</h1>
+      <p class="lead">
+        مرسی که همیشه هوای منو داشتی—حتی وقتی با «پشه» گفتن‌هات حرصم می‌دادی! 😄 تولدت مبارک شیرین جان.
+      </p>
+      <button class="btn-primary" onclick="goToPage(4)">ادامه ✨</button>
+    </section>
+
+    <!-- صفحه ۴: ۶ کارت -->
+    <section class="page" id="page-4">
+      <h1>۶ اتفاق قشنگ برای ۲۹ سالگی 🍂</h1>
+      <p class="lead" style="margin-bottom: 18px;">روی هر کارت بزن تا باز شه:</p>
+      <div class="cards-grid">
+        <div class="mini-card" onclick="this.classList.toggle('open')">
+          <div class="card-title">۱. لبخند بی‌دلیل</div>
+          <div class="card-note">هر روز دلیلی برای خندیدنِ از ته دل داشته باشی.</div>
+        </div>
+        <div class="mini-card" onclick="this.classList.toggle('open')">
+          <div class="card-title">۲. آرامش پاییزی</div>
+          <div class="card-note">دلت همیشه مثل عصرهای گرم آذر آروم و مطمئن باشه.</div>
+        </div>
+        <div class="mini-card" onclick="this.classList.toggle('open')">
+          <div class="card-title">۳. سفرهای جدید</div>
+          <div class="card-note">پر از مسیرهای تازه و خاطره‌های ماندگار با آدم‌های خوب.</div>
+        </div>
+        <div class="mini-card" onclick="this.classList.toggle('open')">
+          <div class="card-title">۴. حالِ خوب</div>
+          <div class="card-note">تنت سلامت، ذهنت سبک و حست همیشه سرِ حال باشه.</div>
+        </div>
+        <div class="mini-card" onclick="this.classList.toggle('open')">
+          <div class="card-title">۵. آرزوهای بزرگ</div>
+          <div class="card-note">ستاره‌های شازده کوچولو یکی‌یکی آرزوهاتو برآورده کنن.</div>
+        </div>
+        <div class="mini-card" onclick="this.classList.toggle('open')">
+          <div class="card-title">۶. پایه همیشگی</div>
+          <div class="card-note">همون خواهر بزرگ‌ترِ خفن که همیشه کنارمه 🦟❤️</div>
+        </div>
+      </div>
+      <button class="btn-primary" onclick="goToPage(5)">بعدی 🎂</button>
+    </section>
+
+    <!-- صفحه ۵: فوت کردن کیک + آرزو و تلگرام -->
+    <section class="page" id="page-5">
+      <div class="cake-box">
+        <div class="cake-visual" id="cakeVisual">
+          <div class="candles">
+            <div class="candle"><span class="flame"></span><span class="smoke">💨</span></div>
+            <div class="candle"><span class="flame"></span><span class="smoke">💨</span></div>
+            <div class="candle"><span class="flame"></span><span class="smoke">💨</span></div>
+          </div>
+          <div class="cake-tier">
+            <div class="cake-icing"></div>
+          </div>
+        </div>
+        <div class="age-badge" id="ageBadge">۲۹ سالگی مبارک! 🎉</div>
+        <button class="btn-primary" id="blowBtn" onclick="blowCandle()">فوت کن 🎂🕯️</button>
+      </div>
+
+      <div class="wish-area">
+        <textarea id="wishInput" placeholder="آرزوی ۲۹ سالگیت رو بنویس..."></textarea>
+        <button class="btn-primary" onclick="sendWish()">ثبت آرزو و ارسال به تلگرام 🌠</button>
+        <div class="status-msg" id="wishStatus"></div>
+        <div>
+          <button class="btn-secondary" onclick="goToPage(6)">صفحه آخر 🎬</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- صفحه ۶: خلوت و مینیمال برای دیدن ویدیو در تلگرام -->
+    <section class="page video-only-page" id="page-6">
+      <h1>فقط برای تو 🎥✨</h1>
+      <div class="video-actions">
+        <a class="btn-primary" href="https://t.me/+psyqFoT8wNgyMzY8" target="_blank" rel="noopener noreferrer">
+          باز کردن کانال و دیدن ویدیو 🎬
+        </a>
+        <a class="btn-secondary" href="https://t.me/c/4342151103/2" target="_blank" rel="noopener noreferrer">
+          رفتن مستقیم به پست ویدیو 🎥
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const totalPages = 6;
+    let currentPage = 1;
+
+    const dotsBar = document.getElementById('dotsBar');
+    for (let i = 1; i <= totalPages; i++) {
+      const d = document.createElement('span');
+      d.className = 'dot' + (i === 1 ? ' active' : '');
+      d.id = 'dot-' + i;
+      dotsBar.appendChild(d);
+    }
+
+    function goToPage(num) {
+      if (num < 1 || num > totalPages) return;
+      document.getElementById('page-' + currentPage).classList.remove('active');
+      document.getElementById('dot-' + currentPage).classList.remove('active');
+
+      currentPage = num;
+      document.getElementById('page-' + currentPage).classList.add('active');
+      document.getElementById('dot-' + currentPage).classList.add('active');
+      document.getElementById('stepLabel').textContent = `مرحله ${currentPage} از ${totalPages}`;
+    }
+
+    function blowCandle() {
+      const cake = document.getElementById('cakeVisual');
+      const badge = document.getElementById('ageBadge');
+      const btn = document.getElementById('blowBtn');
+      cake.classList.add('blown');
+      badge.classList.add('show');
+      btn.textContent = '۲۹ روشن شد ✨';
+    }
+
+    function sendWish() {
+      const wish = document.getElementById('wishInput').value.trim();
+      const status = document.getElementById('wishStatus');
+      const finalWish = wish || 'آرزوهای قشنگ برای ۲۹ سالگی شیرین';
+      status.textContent = 'خدا آرزوهات رو دید ✨';
+
+      const msg =
+        `✨ خدا آرزوهای ۲۹ سالگی شیرین رو دید و ثبت کرد!\n\n` +
+        `🌟 آرزوهای من:\n${finalWish}\n\n` +
+        `🍂 تولد آذرماهی مبارک!`;
+
+      const url = `https://t.me/share/url?url=${encodeURIComponent(' ')}&text=${encodeURIComponent(msg)}`;
+      window.open(url, '_blank', 'noopener,noreferrer');
+    }
+
+    const leavesBg = document.getElementById('leavesBg');
+    const leafChars = ['🍂', '🍁', '✨'];
+    for (let i = 0; i < 12; i++) {
+      const span = document.createElement('span');
+      span.className = 'leaf';
+      span.textContent = leafChars[i % leafChars.length];
+      span.style.left = Math.random() * 100 + 'vw';
+      span.style.animationDuration = (8 + Math.random() * 7) + 's';
+      span.style.animationDelay = (Math.random() * 6) + 's';
+      leavesBg.appendChild(span);
+    }
+  </script>
+</body>
+</html>
